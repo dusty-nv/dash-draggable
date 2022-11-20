@@ -168,13 +168,14 @@ export default class ResponsiveGridLayout extends Component {
 
         children = Array.isArray(children) ? children : [children];
 
-        console.log({layout: this.layouts});
+        /*console.log({layout: this.layouts});
         console.log({gridCols});
         console.log({className});
         console.log({style});
         console.log({height});
         console.log({breakpoints});
-        console.log({props: this.props});
+        console.log({props: this.props});*/
+	   
         return (
             <ResponsiveReactGridLayout
                 className={className}
@@ -186,7 +187,7 @@ export default class ResponsiveGridLayout extends Component {
                 onLayoutChange={(current_layout, all_layouts) => {
                     this.layouts = all_layouts;
 
-                    console.log({layoutchange: {all_layouts, current_layout}});
+                    /*console.log({layoutchange: {all_layouts, current_layout}});*/
                     setProps({current_layout, layouts: all_layouts});
                     if (save) {
                         saveToLs(`${id}-layouts`, all_layouts);
@@ -212,27 +213,9 @@ export default class ResponsiveGridLayout extends Component {
                     }
 
                     return (
-                        <div key={_key} className="item">
-                            {
-                                <div className="item-top">
-                                    <span className="item-top-content">
-                                        ...
-                                    </span>
-                                    {/* 
-                                        <div className="item-top-right">...</div> 
-                                        Maybe we could add a menu to change the 
-                                        properties of the item.
-                                        (static, draggable, resizeable, ...)
-                                    */}
-                                </div>
-                            }
-                            <div
-                                className="item-content"
-                                onMouseDown={(e) => e.stopPropagation()}
-                            >
-                                {child}
-                            </div>
-                        </div>
+					<div key={_key} className="item">
+						{child}
+					</div>
                     );
                 })}
             </ResponsiveReactGridLayout>
@@ -340,7 +323,7 @@ ResponsiveGridLayout.propTypes = {
      * ({breakpoint: number}) the default number of columns by item.
      * Default value is {lg: 6, md: 5, sm: 3, xs: 4, xxs: 2}.
      */
-    ncols: PropTypes.number,
+    ncols: PropTypes.object,
 
     /**
      * (number) the default number of row by item.

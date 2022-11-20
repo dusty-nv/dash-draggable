@@ -26,7 +26,7 @@ DashboardItemResponsive.defaultProps = {
     y: 0,
     w: NCOLS,
     h: NROWS,
-    __isDashboardItem: true
+    isDashboardItem: true
 };
 
 DashboardItemResponsive.propTypes = {
@@ -104,7 +104,7 @@ DashboardItemResponsive.propTypes = {
      * This is an internal prop used to identify the component, this property default value is True. 
      * Setting this value to false is equivalent to not using the DashboardItem wrapper.
      */
-    __isDashboardItem: PropTypes.bool,
+    isDashboardItem: PropTypes.bool,
 
     /**
      * Dash-assigned callback that should be called to report property changes
