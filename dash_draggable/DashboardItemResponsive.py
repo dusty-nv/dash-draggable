@@ -25,15 +25,15 @@ Keyword arguments:
 - minW (number; optional)
 - moved (boolean; optional)
 - resizeHandles (string; optional)
-- __isDashboardItem (boolean; default True): This is an internal prop used to identify the component, this property default value is True. 
+- isDashboardItem (boolean; default True): This is an internal prop used to identify the component, this property default value is True. 
 Setting this value to false is equivalent to not using the DashboardItem wrapper."""
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, x=Component.UNDEFINED, y=Component.UNDEFINED, w=Component.UNDEFINED, h=Component.UNDEFINED, static=Component.UNDEFINED, isDraggable=Component.UNDEFINED, isResizable=Component.UNDEFINED, isBounded=Component.UNDEFINED, maxH=Component.UNDEFINED, maxW=Component.UNDEFINED, minH=Component.UNDEFINED, minW=Component.UNDEFINED, moved=Component.UNDEFINED, resizeHandles=Component.UNDEFINED, __isDashboardItem=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'x', 'y', 'w', 'h', 'static', 'isDraggable', 'isResizable', 'isBounded', 'maxH', 'maxW', 'minH', 'minW', 'moved', 'resizeHandles', '__isDashboardItem']
+    def __init__(self, children=None, id=Component.UNDEFINED, x=Component.UNDEFINED, y=Component.UNDEFINED, w=Component.UNDEFINED, h=Component.UNDEFINED, static=Component.UNDEFINED, isDraggable=Component.UNDEFINED, isResizable=Component.UNDEFINED, isBounded=Component.UNDEFINED, maxH=Component.UNDEFINED, maxW=Component.UNDEFINED, minH=Component.UNDEFINED, minW=Component.UNDEFINED, moved=Component.UNDEFINED, resizeHandles=Component.UNDEFINED, isDashboardItem=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'x', 'y', 'w', 'h', 'static', 'isDraggable', 'isResizable', 'isBounded', 'maxH', 'maxW', 'minH', 'minW', 'moved', 'resizeHandles', 'isDashboardItem']
         self._type = 'DashboardItemResponsive'
         self._namespace = 'dash_draggable'
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'x', 'y', 'w', 'h', 'static', 'isDraggable', 'isResizable', 'isBounded', 'maxH', 'maxW', 'minH', 'minW', 'moved', 'resizeHandles', '__isDashboardItem']
+        self.available_properties = ['children', 'id', 'x', 'y', 'w', 'h', 'static', 'isDraggable', 'isResizable', 'isBounded', 'maxH', 'maxW', 'minH', 'minW', 'moved', 'resizeHandles', 'isDashboardItem']
         self.available_wildcard_properties =            []
 
         _explicit_args = kwargs.pop('_explicit_args')

@@ -1,6 +1,6 @@
 {
   "src/lib/components/DashboardItem.react.js": {
-    "description": "DashboardItem is a wrapper that is intended to be used with DraggableDashboard \r\nto specify the position and size of the wrapped components.",
+    "description": "DashboardItem is a wrapper that is intended to be used with DraggableDashboard \nto specify the position and size of the wrapped components.",
     "displayName": "DashboardItem",
     "methods": [],
     "props": {
@@ -148,12 +148,12 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\r\nto Dash, to make them available for callbacks."
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
       }
     }
   },
   "src/lib/components/DashboardItemResponsive.react.js": {
-    "description": "DashboardItemResponsive is a wrapper that is intended to be used with DraggableDashboard.\r\nDashboardItemResponsive specify the position and size of the item on the dashboard.",
+    "description": "DashboardItemResponsive is a wrapper that is intended to be used with DraggableDashboard.\nDashboardItemResponsive specify the position and size of the item on the dashboard.",
     "displayName": "DashboardItemResponsive",
     "methods": [],
     "props": {
@@ -336,12 +336,12 @@
         "required": false,
         "description": ""
       },
-      "__isDashboardItem": {
+      "isDashboardItem": {
         "type": {
           "name": "bool"
         },
         "required": false,
-        "description": "This is an internal prop used to identify the component, this property default value is True. \r\nSetting this value to false is equivalent to not using the DashboardItem wrapper.",
+        "description": "This is an internal prop used to identify the component, this property default value is True. \nSetting this value to false is equivalent to not using the DashboardItem wrapper.",
         "defaultValue": {
           "value": "true",
           "computed": false
@@ -352,12 +352,12 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\r\nto Dash, to make them available for callbacks."
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
       }
     }
   },
   "src/lib/components/DraggableDashboard.react.js": {
-    "description": "DraggableDashboard is a component for building \r\ndashboards with draggable and resizable items.\r\nIt takes a list of children and display them in\r\ndiv elements that can be moved around the page.\r\nThe initial size of each element can either be \r\ndefined with the layout argument or by wrapping \r\neach element with the DashboardItem component.\r\nBy default, DraggableDashboard will saved the \r\nposition of the elements on client side, when \r\nmoved on the page. But you can also save it \r\non server side by defining a callback with : \r\n`Input(\"<my-id>\", \"layout\")`.",
+    "description": "DraggableDashboard is a component for building \ndashboards with draggable and resizable items.\nIt takes a list of children and display them in\ndiv elements that can be moved around the page.\nThe initial size of each element can either be \ndefined with the layout argument or by wrapping \neach element with the DashboardItem component.\nBy default, DraggableDashboard will saved the \nposition of the elements on client side, when \nmoved on the page. But you can also save it \non server side by defining a callback with : \n`Input(\"<my-id>\", \"layout\")`.",
     "displayName": "DraggableDashboard",
     "methods": [],
     "props": {
@@ -366,7 +366,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "(string) The ID used to identify this component in Dash callbacks.\r\nThe id is also used to automatically save the layout on client side."
+        "description": "(string) The ID used to identify this component in Dash callbacks.\nThe id is also used to automatically save the layout on client side."
       },
       "layout": {
         "type": {
@@ -376,7 +376,7 @@
           }
         },
         "required": false,
-        "description": "Layout is a list of dictionnary with the format:\r\n{x: number, y: number, w: number, h: number}\r\nThe index into the layout must match the id used on each item component with DashboardItem.\r\nIf you choose to use custom keys, you can specify that key in the layout\r\narray objects like so:\r\n{i: string, x: number, y: number, w: number, h: number}\r\nThe ID used to identify this component in Dash callbacks.\r\nThe id is also used to automatically save the layout on client side."
+        "description": "Layout is a list of dictionnary with the format:\n{x: number, y: number, w: number, h: number}\nThe index into the layout must match the id used on each item component with DashboardItem.\nIf you choose to use custom keys, you can specify that key in the layout\narray objects like so:\n{i: string, x: number, y: number, w: number, h: number}\nThe ID used to identify this component in Dash callbacks.\nThe id is also used to automatically save the layout on client side."
       },
       "children": {
         "type": {
@@ -394,7 +394,7 @@
           ]
         },
         "required": false,
-        "description": "Children is a list of the elements to drag and resize on the dashboard.\r\nIt can be a list of dash Components and/or DashboardItem.",
+        "description": "Children is a list of the elements to drag and resize on the dashboard.\nIt can be a list of dash Components and/or DashboardItem.",
         "defaultValue": {
           "value": "[]",
           "computed": false
@@ -405,7 +405,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "(bool) If False, then the layout is not saved in the browser.\r\nDefault value is True.",
+        "description": "(bool) If False, then the layout is not saved in the browser.\nDefault value is True.",
         "defaultValue": {
           "value": "true",
           "computed": false
@@ -416,7 +416,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "(bool) If set to true, then the layout saved in the client browser\r\nwill be cleared on page load.",
+        "description": "(bool) If set to true, then the layout saved in the client browser\nwill be cleared on page load.",
         "defaultValue": {
           "value": "false",
           "computed": false
@@ -427,28 +427,28 @@
           "name": "number"
         },
         "required": false,
-        "description": "(number) the default number of columns by item.\r\nDefault value is 6."
+        "description": "(number) the default number of columns by item.\nDefault value is 6."
       },
       "nrows": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) the default number of row by item.\r\nDefault value is 8."
+        "description": "(number) the default number of row by item.\nDefault value is 8."
       },
       "width": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) width (in px).\r\nDefault value is 1200."
+        "description": "(number) width (in px).\nDefault value is 1200."
       },
       "height": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) height of a row (in px).\r\nDefault value is 30."
+        "description": "(number) height of a row (in px).\nDefault value is 30."
       },
       "className": {
         "type": {
@@ -477,12 +477,12 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\r\nto Dash, to make them available for callbacks."
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
       }
     }
   },
   "src/lib/components/DraggableDashboardResponsive.react.js": {
-    "description": "DraggableDashboard is a component for building\r\ndashboards with draggable and resizable items.\r\nIt takes a list of children and display them in\r\ndiv elements that can be moved around the page.\r\nThe initial size of each element can either be\r\ndefined with the layout argument or by wrapping\r\neach element with the DashboardItem component.\r\nBy default, DraggableDashboard will saved the\r\nposition of the elements on client side, when\r\nmoved on the page. But you can also save it\r\non server side by defining a callback with :\r\n`Input(\"<my-id>\", \"layout\")`.",
+    "description": "DraggableDashboard is a component for building\ndashboards with draggable and resizable items.\nIt takes a list of children and display them in\ndiv elements that can be moved around the page.\nThe initial size of each element can either be\ndefined with the layout argument or by wrapping\neach element with the DashboardItem component.\nBy default, DraggableDashboard will saved the\nposition of the elements on client side, when\nmoved on the page. But you can also save it\non server side by defining a callback with :\n`Input(\"<my-id>\", \"layout\")`.",
     "displayName": "DraggableDashboardResponsive",
     "methods": [],
     "props": {
@@ -491,28 +491,28 @@
           "name": "string"
         },
         "required": false,
-        "description": "(string) The ID used to identify this component in Dash callbacks.\r\nThe id is also used to automatically save the layout on client side."
+        "description": "(string) The ID used to identify this component in Dash callbacks.\nThe id is also used to automatically save the layout on client side."
       },
       "layouts": {
         "type": {
           "name": "object"
         },
         "required": false,
-        "description": "Layout is a list(python)/vector(R) of dictionnary(Python)/list(R) with the format:\r\n{x: number, y: number, w: number, h: number}\r\nThe index into the layout must match the id used on each item component with DashboardItem.\r\nIf you choose to use custom keys, you can specify that key in the layout\r\narray objects like so:\r\n{i: string, x: number, y: number, w: number, h: number}\r\nThe ID used to identify this component in Dash callbacks.\r\nThe id is also used to automatically save the layout on client side."
+        "description": "Layout is a list(python)/vector(R) of dictionnary(Python)/list(R) with the format:\n{x: number, y: number, w: number, h: number}\nThe index into the layout must match the id used on each item component with DashboardItem.\nIf you choose to use custom keys, you can specify that key in the layout\narray objects like so:\n{i: string, x: number, y: number, w: number, h: number}\nThe ID used to identify this component in Dash callbacks.\nThe id is also used to automatically save the layout on client side."
       },
       "breakpoints": {
         "type": {
           "name": "object"
         },
         "required": false,
-        "description": "({breakpoint: number}) The breakpoints for the responsive layout.\r\nFor each screen size (breakpoint) we can define a different layout.\r\n(see also 'layouts' and 'gridCols' arguments)\r\nDefault value is {lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0}"
+        "description": "({breakpoint: number}) The breakpoints for the responsive layout.\nFor each screen size (breakpoint) we can define a different layout.\n(see also 'layouts' and 'gridCols' arguments)\nDefault value is {lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0}"
       },
       "gridCols": {
         "type": {
           "name": "object"
         },
         "required": false,
-        "description": "({breakpoint: number}) the number of columns in the grid layout.\r\nDefault value is {lg: 12, md: 10, sm: 6, xs: 4, xxs: 2}."
+        "description": "({breakpoint: number}) the number of columns in the grid layout.\nDefault value is {lg: 12, md: 10, sm: 6, xs: 4, xxs: 2}."
       },
       "children": {
         "type": {
@@ -530,7 +530,7 @@
           ]
         },
         "required": false,
-        "description": "Children is a list of the items (dash Components and/or \r\nDashboardItem) to diplay on the layout.\r\nBy default all the items can be dragged and resized.",
+        "description": "Children is a list of the items (dash Components and/or \nDashboardItem) to diplay on the layout.\nBy default all the items can be dragged and resized.",
         "defaultValue": {
           "value": "[]",
           "computed": false
@@ -541,7 +541,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "(bool) If True, then the layout is automatically saved on client browser.\r\nDefault value is True",
+        "description": "(bool) If True, then the layout is automatically saved on client browser.\nDefault value is True",
         "defaultValue": {
           "value": "true",
           "computed": false
@@ -552,7 +552,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "(bool) If set to true, then the layout saved in the client browser\r\nwill be cleared in the next page load.",
+        "description": "(bool) If set to true, then the layout saved in the client browser\nwill be cleared in the next page load.",
         "defaultValue": {
           "value": "false",
           "computed": false
@@ -563,21 +563,21 @@
           "name": "number"
         },
         "required": false,
-        "description": "({breakpoint: number}) the default number of columns by item.\r\nDefault value is {lg: 6, md: 5, sm: 3, xs: 4, xxs: 2}."
+        "description": "({breakpoint: number}) the default number of columns by item.\nDefault value is {lg: 6, md: 5, sm: 3, xs: 4, xxs: 2}."
       },
       "nrows": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) the default number of row by item.\r\nDefault value is 8."
+        "description": "(number) the default number of row by item.\nDefault value is 8."
       },
       "height": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) height of a row (in px).\r\nDefault value is 30."
+        "description": "(number) height of a row (in px).\nDefault value is 30."
       },
       "className": {
         "type": {
@@ -606,12 +606,12 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\r\nto Dash, to make them available for callbacks."
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
       }
     }
   },
   "src/lib/components/GridLayout.react.js": {
-    "description": "GridLayout is a component for building\r\ndashboards with draggable and resizable items.\r\nIt takes a list of children and display them in\r\ndiv elements that can be moved around the page.\r\nThe initial size of each element can either be\r\ndefined with the layout argument or by wrapping\r\neach element with the DashboardItem component.\r\nBy default, GridLayout will saved the\r\nposition of the elements on client side, when\r\nmoved on the page. But you can also save it\r\non server side by defining a callback with :\r\n`Input(\"<my-id>\", \"layout\")`.",
+    "description": "GridLayout is a component for building\ndashboards with draggable and resizable items.\nIt takes a list of children and display them in\ndiv elements that can be moved around the page.\nThe initial size of each element can either be\ndefined with the layout argument or by wrapping\neach element with the DashboardItem component.\nBy default, GridLayout will saved the\nposition of the elements on client side, when\nmoved on the page. But you can also save it\non server side by defining a callback with :\n`Input(\"<my-id>\", \"layout\")`.",
     "displayName": "GridLayout",
     "methods": [],
     "props": {
@@ -620,7 +620,7 @@
           "name": "string"
         },
         "required": false,
-        "description": "(string) The ID used to identify this component in Dash callbacks.\r\nThe id is also used to automatically save the layout on client side."
+        "description": "(string) The ID used to identify this component in Dash callbacks.\nThe id is also used to automatically save the layout on client side."
       },
       "layout": {
         "type": {
@@ -630,7 +630,7 @@
           }
         },
         "required": false,
-        "description": "Layout is a list of dictionnary with the format:\r\n{x: number, y: number, w: number, h: number}\r\nThe index into the layout must match the id used on each item component with DashboardItem.\r\nIf you choose to use custom keys, you can specify that key in the layout\r\narray objects like so:\r\n{i: string, x: number, y: number, w: number, h: number}\r\nThe ID used to identify this component in Dash callbacks.\r\nThe id is also used to automatically save the layout on client side."
+        "description": "Layout is a list of dictionnary with the format:\n{x: number, y: number, w: number, h: number}\nThe index into the layout must match the id used on each item component with DashboardItem.\nIf you choose to use custom keys, you can specify that key in the layout\narray objects like so:\n{i: string, x: number, y: number, w: number, h: number}\nThe ID used to identify this component in Dash callbacks.\nThe id is also used to automatically save the layout on client side."
       },
       "children": {
         "type": {
@@ -648,7 +648,7 @@
           ]
         },
         "required": false,
-        "description": "Children is a list of the elements to drag and resize on the dashboard.\r\nIt can be a list of dash Components and/or DashboardItem.",
+        "description": "Children is a list of the elements to drag and resize on the dashboard.\nIt can be a list of dash Components and/or DashboardItem.",
         "defaultValue": {
           "value": "[]",
           "computed": false
@@ -659,7 +659,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "(bool) If False, then the layout is not saved in the browser.\r\nDefault value is True.",
+        "description": "(bool) If False, then the layout is not saved in the browser.\nDefault value is True.",
         "defaultValue": {
           "value": "true",
           "computed": false
@@ -670,7 +670,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "(bool) If set to true, then the layout saved in the client browser\r\nwill be cleared on page load.",
+        "description": "(bool) If set to true, then the layout saved in the client browser\nwill be cleared on page load.",
         "defaultValue": {
           "value": "false",
           "computed": false
@@ -681,35 +681,35 @@
           "name": "number"
         },
         "required": false,
-        "description": "(number) the default number of columns by item.\r\nDefault value is 6."
+        "description": "(number) the default number of columns by item.\nDefault value is 6."
       },
       "nrows": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) the default number of row by item.\r\nDefault value is 8."
+        "description": "(number) the default number of row by item.\nDefault value is 8."
       },
       "width": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) width (in px).\r\nDefault value is 1200."
+        "description": "(number) width (in px).\nDefault value is 1200."
       },
       "gridCols": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) number of columns in the grid layout.\r\nDefault value is 12."
+        "description": "(number) number of columns in the grid layout.\nDefault value is 12."
       },
       "height": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) height of a row (in px).\r\nDefault value is 30."
+        "description": "(number) height of a row (in px).\nDefault value is 30."
       },
       "className": {
         "type": {
@@ -956,12 +956,12 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\r\nto Dash, to make them available for callbacks."
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
       }
     }
   },
   "src/lib/components/ResponsiveGridLayout.react.js": {
-    "description": "DraggableDashboard is a component for building\r\ndashboards with draggable and resizable items.\r\nIt takes a list of children and display them in\r\ndiv elements that can be moved around the page.\r\nThe initial size of each element can either be\r\ndefined with the layout argument or by wrapping\r\neach element with the DashboardItem component.\r\nBy default, DraggableDashboard will saved the\r\nposition of the elements on client side, when\r\nmoved on the page. But you can also save it\r\non server side by defining a callback with :\r\n`Input(\"<my-id>\", \"layout\")`.",
+    "description": "DraggableDashboard is a component for building\ndashboards with draggable and resizable items.\nIt takes a list of children and display them in\ndiv elements that can be moved around the page.\nThe initial size of each element can either be\ndefined with the layout argument or by wrapping\neach element with the DashboardItem component.\nBy default, DraggableDashboard will saved the\nposition of the elements on client side, when\nmoved on the page. But you can also save it\non server side by defining a callback with :\n`Input(\"<my-id>\", \"layout\")`.",
     "displayName": "ResponsiveGridLayout",
     "methods": [],
     "props": {
@@ -970,28 +970,28 @@
           "name": "string"
         },
         "required": false,
-        "description": "(string) The ID used to identify this component in Dash callbacks.\r\nThe id is also used to automatically save the layout on client side."
+        "description": "(string) The ID used to identify this component in Dash callbacks.\nThe id is also used to automatically save the layout on client side."
       },
       "layouts": {
         "type": {
           "name": "object"
         },
         "required": false,
-        "description": "Layout is a list(python)/vector(R) of dictionnary(Python)/list(R) with the format:\r\n{x: number, y: number, w: number, h: number}\r\nThe index into the layout must match the id used on each item component with DashboardItem.\r\nIf you choose to use custom keys, you can specify that key in the layout\r\narray objects like so:\r\n{i: string, x: number, y: number, w: number, h: number}\r\nThe ID used to identify this component in Dash callbacks.\r\nThe id is also used to automatically save the layout on client side."
+        "description": "Layout is a list(python)/vector(R) of dictionnary(Python)/list(R) with the format:\n{x: number, y: number, w: number, h: number}\nThe index into the layout must match the id used on each item component with DashboardItem.\nIf you choose to use custom keys, you can specify that key in the layout\narray objects like so:\n{i: string, x: number, y: number, w: number, h: number}\nThe ID used to identify this component in Dash callbacks.\nThe id is also used to automatically save the layout on client side."
       },
       "breakpoints": {
         "type": {
           "name": "object"
         },
         "required": false,
-        "description": "({breakpoint: number}) The breakpoints for the responsive layout.\r\nFor each screen size (breakpoint) we can define a different layout.\r\n(see also 'layouts' and 'gridCols' arguments)\r\nDefault value is {lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0}"
+        "description": "({breakpoint: number}) The breakpoints for the responsive layout.\nFor each screen size (breakpoint) we can define a different layout.\n(see also 'layouts' and 'gridCols' arguments)\nDefault value is {lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0}"
       },
       "gridCols": {
         "type": {
           "name": "object"
         },
         "required": false,
-        "description": "({breakpoint: number}) the number of columns in the grid layout.\r\nDefault value is {lg: 12, md: 10, sm: 6, xs: 4, xxs: 2}."
+        "description": "({breakpoint: number}) the number of columns in the grid layout.\nDefault value is {lg: 12, md: 10, sm: 6, xs: 4, xxs: 2}."
       },
       "children": {
         "type": {
@@ -1009,7 +1009,7 @@
           ]
         },
         "required": false,
-        "description": "Children is a list of the items (dash Components and/or\r\nDashboardItem) to diplay on the layout.\r\nBy default all the items can be dragged and resized.",
+        "description": "Children is a list of the items (dash Components and/or\nDashboardItem) to diplay on the layout.\nBy default all the items can be dragged and resized.",
         "defaultValue": {
           "value": "[]",
           "computed": false
@@ -1020,7 +1020,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "(bool) If True, then the layout is automatically saved on client browser.\r\nDefault value is True",
+        "description": "(bool) If True, then the layout is automatically saved on client browser.\nDefault value is True",
         "defaultValue": {
           "value": "true",
           "computed": false
@@ -1031,7 +1031,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "(bool) If set to true, the position of elements saved on client side\r\nwill be cleared on the next page load.",
+        "description": "(bool) If set to true, the position of elements saved on client side\nwill be cleared on the next page load.",
         "defaultValue": {
           "value": "false",
           "computed": false
@@ -1039,24 +1039,24 @@
       },
       "ncols": {
         "type": {
-          "name": "number"
+          "name": "object"
         },
         "required": false,
-        "description": "({breakpoint: number}) the default number of columns by item.\r\nDefault value is {lg: 6, md: 5, sm: 3, xs: 4, xxs: 2}."
+        "description": "({breakpoint: number}) the default number of columns by item.\nDefault value is {lg: 6, md: 5, sm: 3, xs: 4, xxs: 2}."
       },
       "nrows": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) the default number of row by item.\r\nDefault value is 8."
+        "description": "(number) the default number of row by item.\nDefault value is 8."
       },
       "height": {
         "type": {
           "name": "number"
         },
         "required": false,
-        "description": "(number) height of a row (in px).\r\nDefault value is 30."
+        "description": "(number) height of a row (in px).\nDefault value is 30."
       },
       "className": {
         "type": {
@@ -1319,7 +1319,7 @@
           "name": "func"
         },
         "required": false,
-        "description": "Dash-assigned callback that should be called to report property changes\r\nto Dash, to make them available for callbacks."
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
       }
     }
   }
